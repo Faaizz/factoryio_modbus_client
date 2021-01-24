@@ -1,0 +1,350 @@
+﻿Name,Type,Data Type,Address
+S_AL1_B,Input,Bool,Input 0
+P_AL1_B_FT,Input,Bool,Input 1
+P_AL1_B_BK,Input,Bool,Input 2
+S_AL1_B1,Input,Bool,Input 3
+S_AL1_B2,Input,Bool,Input 4
+S_AL1_B3,Input,Bool,Input 5
+LP_AL1_CLAMPED,Input,Bool,Input 6
+S_AL1_LP,Input,Bool,Input 7
+S_AL1_L,Input,Bool,Input 8
+P_AL1_L_FT,Input,Bool,Input 9
+P_AL1_L_BK,Input,Bool,Input 10
+S_AL1_L1,Input,Bool,Input 11
+S_AL1_L2,Input,Bool,Input 12
+S_AL1_L3,Input,Bool,Input 13
+RP_AL1_CLAMPED,Input,Bool,Input 14
+S_AL1_RP,Input,Bool,Input 15
+S_AL1,Input,Bool,Input 16
+S_BIN_1,Input,Bool,Input 17
+S_AL1_BL,Input,Bool,Input 18
+AL1_DETECTED,Input,Bool,Input 19
+LP_AL1_LIMIT,Input,Bool,Input 20
+S_AL1_P_B1,Input,Bool,Input 21
+S_AL1_P_B2,Input,Bool,Input 22
+S_AL1_MCB,Input,Bool,Input 23
+MCB_BUSY,Input,Bool,Input 24
+MCB_ERROR,Input,Bool,Input 25
+S_AL1_MCBR,Input,Bool,Input 26
+MCBR_BUSY,Input,Bool,Input 27
+MCBR_ERROR,Input,Bool,Input 28
+S_AL1_P_B3,Input,Bool,Input 29
+S_AL1_MCB2,Input,Bool,Input 30
+S_AL1_MCBR2,Input,Bool,Input 31
+ST_AL1_ST1,Input,Bool,Input 32
+ST_AL1_ST2,Input,Bool,Input 33
+ST_AL1_ST3,Input,Bool,Input 34
+RP_AL1_ST_CLAMPED,Input,Bool,Input 35
+AL1_ST_DETECTED,Input,Bool,Input 36
+AL1_G_S1,Input,Bool,Input 37
+AL1_G_SC_LL,Input,Bool,Input 38
+AL1_G_SC_MZ,Input,Bool,Input 39
+AL1_G_SC_ML,Input,Bool,Input 40
+AL1_G_SC_MX,Input,Bool,Input 41
+AL1_G_SC_RL,Input,Bool,Input 42
+ST_AL1_ST0,Input,Bool,Input 43
+S_AL2_B,Input,Bool,Input 48
+P_AL2_B_FT,Input,Bool,Input 49
+P_AL2_B_BK,Input,Bool,Input 50
+S_AL2_B1,Input,Bool,Input 51
+S_AL2_B2,Input,Bool,Input 52
+S_AL2_B3,Input,Bool,Input 53
+LP_AL2_CLAMPED,Input,Bool,Input 54
+S_AL2_LP,Input,Bool,Input 55
+S_AL2_L,Input,Bool,Input 56
+P_AL2_L_FT,Input,Bool,Input 57
+P_AL2_L_BK,Input,Bool,Input 58
+S_AL2_L1,Input,Bool,Input 59
+S_AL2_L2,Input,Bool,Input 60
+S_AL2_L3,Input,Bool,Input 61
+RP_AL2_CLAMPED,Input,Bool,Input 62
+S_AL2_RP,Input,Bool,Input 63
+S_AL2,Input,Bool,Input 64
+S_BIN_2,Input,Bool,Input 65
+S_AL2_BL,Input,Bool,Input 66
+AL2_DETECTED,Input,Bool,Input 67
+LP_AL2_LIMIT,Input,Bool,Input 68
+S_AL2_P_B1,Input,Bool,Input 69
+S_AL2_P_B2,Input,Bool,Input 70
+S_AL2_MCL,Input,Bool,Input 71
+MCL_BUSY,Input,Bool,Input 72
+MCL_ERROR,Input,Bool,Input 73
+S_AL2_MCLR,Input,Bool,Input 74
+MCLR_BUSY,Input,Bool,Input 75
+MCLR_ERROR,Input,Bool,Input 76
+S_AL2_P_B3,Input,Bool,Input 77
+S_AL2_MCL2,Input,Bool,Input 78
+S_AL2_MCLR2,Input,Bool,Input 79
+ST_AL2_ST1,Input,Bool,Input 80
+ST_AL2_ST2,Input,Bool,Input 81
+ST_AL2_ST3,Input,Bool,Input 82
+RP_AL2_ST_CLAMPED,Input,Bool,Input 83
+AL2_ST_DETECTED,Input,Bool,Input 84
+AL2_G_S1,Input,Bool,Input 85
+AL2_G_SC_LL,Input,Bool,Input 86
+AL2_G_SC_MZ,Input,Bool,Input 87
+AL2_G_SC_ML,Input,Bool,Input 88
+AL2_G_SC_MX,Input,Bool,Input 89
+AL2_G_SC_RL,Input,Bool,Input 90
+ST_AL2_ST0,Input,Bool,Input 91
+P_AL1_B,Output,Bool,Coil 0
+SB_AL1_B1,Output,Bool,Coil 1
+SB_AL1_B2,Output,Bool,Coil 2
+SB_AL1_B3,Output,Bool,Coil 3
+LP_AL1_CLAMP,Output,Bool,Coil 4
+P_AL1_L,Output,Bool,Coil 5
+SB_AL1_L1,Output,Bool,Coil 6
+SB_AL1_L2,Output,Bool,Coil 7
+SB_AL1_L3,Output,Bool,Coil 8
+RP_AL1_CLAMP,Output,Bool,Coil 9
+SB_AL1,Output,Bool,Coil 10
+PUWS_AL1_1_PLUS,Output,Bool,Coil 11
+PUWS_AL1_1_RT,Output,Bool,Coil 12
+CS_AL1_PLUS,Output,Bool,Coil 13
+AL1_GRAB,Output,Bool,Coil 14
+LP_AL1_RAISE,Output,Bool,Coil 15
+E_AL1_B1,Output,Bool,Coil 16
+PUWS_AL1_B1_PLUS,Output,Bool,Coil 17
+PUWS_AL1_B1_RIGHT,Output,Bool,Coil 18
+PAS_AL1_PLUS,Output,Bool,Coil 19
+PAS_AL1_TURN,Output,Bool,Coil 20
+RP_AL1_ST_CLAMP,Output,Bool,Coil 21
+AL1_ST_GRAB,Output,Bool,Coil 22
+AL1_EMIT,Output,Bool,Coil 23
+RC_AL1_ST,Output,Bool,Coil 24
+RC_AL1_G7,Output,Bool,Coil 25
+AL1_G_SC_LT,Output,Bool,Coil 26
+AL1_G_SC_LIFT,Output,Bool,Coil 27
+AL1_G_SC_RT,Output,Bool,Coil 28
+PAS_AL1_ST_TURN,Output,Bool,Coil 29
+P_AL2_B,Output,Bool,Coil 32
+SB_AL2_B1,Output,Bool,Coil 33
+SB_AL2_B2,Output,Bool,Coil 34
+SB_AL2_B3,Output,Bool,Coil 35
+LP_AL2_CLAMP,Output,Bool,Coil 36
+P_AL2_L,Output,Bool,Coil 37
+SB_AL2_L1,Output,Bool,Coil 38
+SB_AL2_L2,Output,Bool,Coil 39
+SB_AL2_L3,Output,Bool,Coil 40
+RP_AL2_CLAMP,Output,Bool,Coil 41
+SB_AL2,Output,Bool,Coil 42
+PUWS_AL2_1_PLUS,Output,Bool,Coil 43
+PUWS_AL2_1_LT,Output,Bool,Coil 44
+CS_AL2_PLUS,Output,Bool,Coil 45
+AL2_GRAB,Output,Bool,Coil 46
+LP_AL2_RAISE,Output,Bool,Coil 47
+E_AL2_B1,Output,Bool,Coil 48
+PUWS_AL2_B1_PLUS,Output,Bool,Coil 49
+PUWS_AL2_B1_LEFT,Output,Bool,Coil 50
+PAS_AL2_PLUS,Output,Bool,Coil 51
+PAS_AL2_TURN,Output,Bool,Coil 52
+RP_AL2_ST_CLAMP,Output,Bool,Coil 53
+AL2_ST_GRAB,Output,Bool,Coil 54
+AL2_EMIT,Output,Bool,Coil 55
+RC_AL2_ST,Output,Bool,Coil 56
+RC_AL2_G7,Output,Bool,Coil 57
+AL2_G_SC_LT,Output,Bool,Coil 58
+AL2_G_SC_LIFT,Output,Bool,Coil 59
+AL2_G_SC_RT,Output,Bool,Coil 60
+PAS_AL2_ST_TURN,Output,Bool,Coil 61
+BC_AL1_3 (4m),Output,Bool,Coil 71
+BC_AL1_B1 (2m),Output,Bool,Coil 72
+BC_AL1_B2 (2m),Output,Bool,Coil 73
+BC_AL1_B3 (2m),Output,Bool,Coil 74
+BC_AL1_B4 (4m),Output,Bool,Coil 75
+BC_AL1_L1 (2m),Output,Bool,Coil 76
+BC_AL1_L2 (2m),Output,Bool,Coil 77
+BC_AL1_L3 (2m),Output,Bool,Coil 78
+BC_AL1_L4 (4m),Output,Bool,Coil 79
+BC_AL1_4_BI (2m),Output,Bool,Coil 80
+Belt Conveyor (2m) 1,Output,Bool,Coil 81
+Belt Conveyor (2m) 2,Output,Bool,Coil 82
+Belt Conveyor (2m) 3,Output,Bool,Coil 83
+Belt Conveyor (2m) 4,Output,Bool,Coil 84
+Belt Conveyor (2m) 5,Output,Bool,Coil 85
+Belt Conveyor (2m) 6,Output,Bool,Coil 86
+Belt Conveyor (2m) 7,Output,Bool,Coil 87
+Belt Conveyor (2m) 8,Output,Bool,Coil 88
+Belt Conveyor (2m) 9,Output,Bool,Coil 89
+Belt Conveyor (4m) 1,Output,Bool,Coil 90
+Belt Conveyor (4m) 2,Output,Bool,Coil 91
+Belt Conveyor (4m) 4,Output,Bool,Coil 92
+Belt Conveyor (4m) 5,Output,Bool,Coil 93
+Belt Conveyor (4m) 6,Output,Bool,Coil 94
+Belt Conveyor (4m) 8,Output,Bool,Coil 95
+Belt Conveyor (4m) 9,Output,Bool,Coil 96
+Belt Conveyor (6m) 1,Output,Bool,Coil 97
+Belt Conveyor (6m) 2,Output,Bool,Coil 98
+Belt Conveyor (6m) 3,Output,Bool,Coil 99
+Belt Conveyor (6m) 4,Output,Bool,Coil 100
+Belt Conveyor (6m) 5,Output,Bool,Coil 101
+Belt Conveyor (6m) 6,Output,Bool,Coil 102
+Belt Conveyor (6m) 7,Output,Bool,Coil 103
+Belt Conveyor (6m) 8,Output,Bool,Coil 104
+Belt Conveyor (6m) 9,Output,Bool,Coil 105
+Belt Conveyor (2m) 10,Output,Bool,Coil 106
+Belt Conveyor (2m) 11,Output,Bool,Coil 107
+Belt Conveyor (2m) 12,Output,Bool,Coil 108
+Belt Conveyor (2m) 14,Output,Bool,Coil 109
+Belt Conveyor (2m) 20,Output,Bool,Coil 110
+Belt Conveyor (2m) 21,Output,Bool,Coil 111
+Belt Conveyor (2m) 22,Output,Bool,Coil 112
+Belt Conveyor (2m) 23,Output,Bool,Coil 113
+Belt Conveyor (2m) 24,Output,Bool,Coil 114
+Belt Conveyor (2m) 25,Output,Bool,Coil 115
+Belt Conveyor (2m) 26,Output,Bool,Coil 116
+Belt Conveyor (2m) 27,Output,Bool,Coil 117
+Belt Conveyor (2m) 28,Output,Bool,Coil 118
+Belt Conveyor (2m) 29,Output,Bool,Coil 119
+Belt Conveyor (2m) 30,Output,Bool,Coil 120
+Belt Conveyor (2m) 31,Output,Bool,Coil 121
+Belt Conveyor (2m) 32,Output,Bool,Coil 122
+Belt Conveyor (2m) 33,Output,Bool,Coil 123
+Belt Conveyor (2m) 34,Output,Bool,Coil 124
+Belt Conveyor (2m) 35,Output,Bool,Coil 125
+Belt Conveyor (2m) 36,Output,Bool,Coil 126
+Belt Conveyor (2m) 37,Output,Bool,Coil 127
+Belt Conveyor (2m) 38,Output,Bool,Coil 128
+Belt Conveyor (2m) 39,Output,Bool,Coil 129
+Belt Conveyor (2m) 40,Output,Bool,Coil 130
+Belt Conveyor (2m) 41,Output,Bool,Coil 131
+Belt Conveyor (4m) 10,Output,Bool,Coil 132
+Belt Conveyor (4m) 11,Output,Bool,Coil 133
+Belt Conveyor (4m) 12,Output,Bool,Coil 134
+Belt Conveyor (4m) 13,Output,Bool,Coil 135
+Belt Conveyor (4m) 14,Output,Bool,Coil 136
+Belt Conveyor (4m) 15,Output,Bool,Coil 137
+Belt Conveyor (4m) 16,Output,Bool,Coil 138
+Belt Conveyor (4m) 17,Output,Bool,Coil 139
+Belt Conveyor (4m) 19,Output,Bool,Coil 140
+Belt Conveyor (4m) 20,Output,Bool,Coil 141
+Belt Conveyor (6m) 10,Output,Bool,Coil 142
+Belt Conveyor (6m) 11,Output,Bool,Coil 143
+Belt Conveyor (6m) 12,Output,Bool,Coil 144
+Belt Conveyor (6m) 13,Output,Bool,Coil 145
+Belt Conveyor (6m) 14,Output,Bool,Coil 146
+Belt Conveyor (6m) 15,Output,Bool,Coil 147
+Belt Conveyor (6m) 16,Output,Bool,Coil 148
+Belt Conveyor (6m) 17,Output,Bool,Coil 149
+Belt Conveyor (6m) 18,Output,Bool,Coil 150
+Belt Conveyor (6m) 19,Output,Bool,Coil 151
+Belt Conveyor (6m) 20,Output,Bool,Coil 152
+Belt Conveyor (6m) 21,Output,Bool,Coil 153
+Belt Conveyor (6m) 22,Output,Bool,Coil 154
+Belt Conveyor Inclined 1,Output,Bool,Coil 155
+Belt Conveyor Inclined 2,Output,Bool,Coil 156
+Conveyor Scale 1 (-),Output,Bool,Coil 157
+Conveyor Scale 2 (-),Output,Bool,Coil 158
+Curved Belt Conveyor 3 CW,Output,Bool,Coil 159
+Curved Belt Conveyor 4 CW,Output,Bool,Coil 160
+Curved Belt Conveyor 5 CW,Output,Bool,Coil 161
+Curved Belt Conveyor 6 CW,Output,Bool,Coil 162
+Curved Belt Conveyor 7 CW,Output,Bool,Coil 163
+Curved Belt Conveyor 8 CW,Output,Bool,Coil 164
+Curved Belt Conveyor 1 CCW,Output,Bool,Coil 165
+Curved Belt Conveyor 2 CCW,Output,Bool,Coil 166
+Curved Belt Conveyor 9 CCW,Output,Bool,Coil 167
+Curved Belt Conveyor 10 CW,Output,Bool,Coil 168
+Curved Belt Conveyor 11 CW,Output,Bool,Coil 169
+Curved Belt Conveyor 13 CW,Output,Bool,Coil 170
+Curved Belt Conveyor 14 CW,Output,Bool,Coil 171
+Curved Belt Conveyor 12 CCW,Output,Bool,Coil 172
+Curved Belt Conveyor 15 CCW,Output,Bool,Coil 173
+Curved Belt Conveyor 16 CCW,Output,Bool,Coil 174
+Curved Roller Conveyor 1 CW,Output,Bool,Coil 175
+Curved Roller Conveyor 4 CW,Output,Bool,Coil 176
+Curved Roller Conveyor 2 CCW,Output,Bool,Coil 177
+Curved Roller Conveyor 3 CCW,Output,Bool,Coil 178
+Machining Center 1 (Stop),Output,Bool,Coil 179
+Machining Center 2 (Stop),Output,Bool,Coil 180
+Machining Center 3 (Stop),Output,Bool,Coil 181
+Machining Center 4 (Stop),Output,Bool,Coil 182
+Machining Center 1 (Reset),Output,Bool,Coil 183
+Machining Center 1 (Start),Output,Bool,Coil 184
+Machining Center 2 (Reset),Output,Bool,Coil 185
+Machining Center 2 (Start),Output,Bool,Coil 186
+Machining Center 3 (Reset),Output,Bool,Coil 187
+Machining Center 3 (Start),Output,Bool,Coil 188
+Machining Center 4 (Reset),Output,Bool,Coil 189
+Machining Center 4 (Start'),Output,Bool,Coil 190
+MCBR_PRODUCE_LID,Output,Bool,Coil 191
+MCB_PRODUCE_LID,Output,Bool,Coil 192
+MCLR_PRODUCE_LID,Output,Bool,Coil 193
+MCL_PRODUCE_LID,Output,Bool,Coil 194
+Pick & Place 1 C(+),Output,Bool,Coil 195
+Pick & Place 2 C(+),Output,Bool,Coil 196
+Pick & Place 3 C(+),Output,Bool,Coil 197
+Pick & Place 4 C(+),Output,Bool,Coil 198
+Pivot Arm Sorter 2 Turn,Output,Bool,Coil 199
+Pivot Arm Sorter 4 Turn,Output,Bool,Coil 200
+Pivot Arm Sorter 1 Belt (-),Output,Bool,Coil 201
+Pivot Arm Sorter 2 Belt (+),Output,Bool,Coil 202
+Pivot Arm Sorter 2 Belt (-),Output,Bool,Coil 203
+Pivot Arm Sorter 3 Belt (-),Output,Bool,Coil 204
+Pivot Arm Sorter 4 Belt (+),Output,Bool,Coil 205
+Pivot Arm Sorter 4 Belt (-),Output,Bool,Coil 206
+Pivot Arm Sorter 5 Belt (+),Output,Bool,Coil 207
+Pivot Arm Sorter 5 Belt (-),Output,Bool,Coil 208
+Pivot Arm Sorter 6 Belt (+),Output,Bool,Coil 209
+Pivot Arm Sorter 6 Belt (-),Output,Bool,Coil 210
+Pop Up Wheel Sorter 1 (Left),Output,Bool,Coil 211
+Pop Up Wheel Sorter 2 (Left),Output,Bool,Coil 212
+Pop Up Wheel Sorter 3 (Right),Output,Bool,Coil 213
+Pop Up Wheel Sorter 4 (Right),Output,Bool,Coil 214
+Remover 1 (Remove),Output,Bool,Coil 215
+Remover 2 (Remove),Output,Bool,Coil 216
+Remover 3 (Remove),Output,Bool,Coil 217
+Remover 4 (Remove),Output,Bool,Coil 218
+Reset Button 1 (Light),Output,Bool,Coil 219
+Reset Button 2 (Light),Output,Bool,Coil 220
+Right Positioner 3 (Raise),Output,Bool,Coil 221
+Right Positioner 6 (Raise),Output,Bool,Coil 222
+Roller Conveyor (2m) 1,Output,Bool,Coil 223
+Roller Conveyor (2m) 2,Output,Bool,Coil 224
+Roller Conveyor (2m) 3,Output,Bool,Coil 225
+Roller Conveyor (2m) 4,Output,Bool,Coil 226
+Roller Conveyor (2m) 5,Output,Bool,Coil 227
+Roller Conveyor (2m) 6,Output,Bool,Coil 228
+Roller Conveyor (6m) 2,Output,Bool,Coil 229
+Roller Conveyor (6m) 3,Output,Bool,Coil 230
+Start Button 1 (Light),Output,Bool,Coil 231
+Start Button 2 (Light),Output,Bool,Coil 232
+Stop Blade 2,Output,Bool,Coil 233
+Stop Blade 3,Output,Bool,Coil 234
+Stop Button 1 (Light),Output,Bool,Coil 235
+Stop Button 2 (Light),Output,Bool,Coil 236
+Straight Spur Conveyor 1 (+),Output,Bool,Coil 237
+Straight Spur Conveyor 1 (-),Output,Bool,Coil 238
+Straight Spur Conveyor 2 (+),Output,Bool,Coil 239
+Straight Spur Conveyor 2 (-),Output,Bool,Coil 240
+FACTORY I/O (Pause),Output,Bool,Coil 250
+FACTORY I/O (Reset),Output,Bool,Coil 251
+FACTORY I/O (Run),Output,Bool,Coil 252
+CS_AL1_W,Input,Real,Input Reg 0
+AL1_X_POS,Input,Real,Input Reg 1
+AL1_Y_POS,Input,Real,Input Reg 2
+AL1_Z_POS,Input,Real,Input Reg 3
+AL1_ST_X_POS,Input,Real,Input Reg 4
+AL1_ST_Y_POS,Input,Real,Input Reg 5
+AL1_ST_Z_POS,Input,Real,Input Reg 6
+CS_AL2_W,Input,Real,Input Reg 7
+AL2_X_POS,Input,Real,Input Reg 8
+AL2_Y_POS,Input,Real,Input Reg 9
+AL2_Z_POS,Input,Real,Input Reg 10
+AL2_ST_X_POS,Input,Real,Input Reg 11
+AL2_ST_Y_POS,Input,Real,Input Reg 12
+AL2_ST_Z_POS,Input,Real,Input Reg 13
+AL1_X_SET,Output,Real,Holding Reg 0
+AL1_Y_SET,Output,Real,Holding Reg 1
+AL1_Z_SET,Output,Real,Holding Reg 2
+AL1_ST_X_SET,Output,Real,Holding Reg 3
+AL1_ST_Y_SET,Output,Real,Holding Reg 4
+AL1_ST_Z_SET,Output,Real,Holding Reg 5
+AL1_G_SC_TG,Output,Int,Holding Reg 6
+AL2_X_SET,Output,Real,Holding Reg 7
+AL2_Y_SET,Output,Real,Holding Reg 8
+AL2_Z_SET,Output,Real,Holding Reg 9
+AL2_ST_X_SET,Output,Real,Holding Reg 10
+AL2_ST_Y_SET,Output,Real,Holding Reg 11
+AL2_ST_Z_SET,Output,Real,Holding Reg 12
+AL2_G_SC_TG,Output,Int,Holding Reg 13

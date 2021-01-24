@@ -1,0 +1,11 @@
+# Housekeeping
+conda_python_path.bat
+client.ipynb
+pandas.ipynb
+fmc.ipynb
+
+# Python
+*__pycache__*
+
+# Sample codes
+sample/

@@ -49,18 +49,23 @@ def evaluate_reader(tag):
     read_type= None
     UNIT= 0x1
     length= 1
+    unit_reader= None
 
     if tag["Type"]=="Input" and tag["Data Type"]=="Bool":
         read_type="read_discrete_inputs"
+        unit_reader= "getBit(0)"
     
     if tag["Type"]=="Output" and tag["Data Type"]=="Bool":
         read_type="read_coils"
+        unit_reader= "getBit(0)"
 
     if tag["Type"]=="Input" and tag["Data Type"]=="Real":
         read_type="read_input_registers"
+        unit_reader= "getRegister(0)"
     
     if tag["Type"]=="Output" and tag["Data Type"]=="Real":
         read_type="read_holding_registers"
+        unit_reader= "getRegister(0)"
 
     # Check if no type is matched, raise  ValueError
     if read_type == None: 
@@ -70,7 +75,8 @@ def evaluate_reader(tag):
     return ({
         "read_type": read_type,
         "UNIT": UNIT,
-        "length": length
+        "length": length,
+        "unit_reader": unit_reader
     })
 
 def evaluate_writer(tag):

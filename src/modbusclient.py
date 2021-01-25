@@ -1,9 +1,20 @@
 # Imports
+import os, importlib, sys
 from pymodbus.client.sync import ModbusTcpClient
 import pandas as pd
 
 # Self-defined imports
-from . import FMC_functions
+# Long-styled import method is used to preserve import structure 
+#   regardless of execution/import method
+# FMC_functions
+work_dir= os.path.dirname(os.path.realpath(__file__))
+module_name= "FMC_functions"
+file_path= work_dir + "/FMC_functions.py"
+spec = importlib.util.spec_from_file_location(module_name, file_path)
+FMC_functions = importlib.util.module_from_spec(spec)
+sys.modules[module_name] = FMC_functions
+spec.loader.exec_module(FMC_functions)
+
 
 class FactoryIOModbusClient(ModbusTcpClient):
 
@@ -63,7 +74,8 @@ class FactoryIOModbusClient(ModbusTcpClient):
         reader= FMC_functions.evaluate_reader(tag)
         
         # Perform read 
-        return eval("self." + reader["read_type"])(tag["Address"], reader["length"], unit=reader["UNIT"])
+        read_step= eval("self." + reader["read_type"])(tag["Address"], reader["length"], unit=reader["UNIT"])
+        return eval("read_step." + reader["unit_reader"])
 
     def write_tag(self, tag, value):
         """Write tag

@@ -27,7 +27,8 @@ class FMC_functionsTest(unittest.TestCase):
             {
                 "read_type": "read_discrete_inputs",
                 "UNIT": 0x1,
-                "length": 1
+                "length": 1,
+                "unit_reader": "getBit(0)"
             }
         )
         # Discrete Output
@@ -39,7 +40,8 @@ class FMC_functionsTest(unittest.TestCase):
             {
                 "read_type": "read_coils",
                 "UNIT": 0x1,
-                "length": 1
+                "length": 1,
+                "unit_reader": "getBit(0)"
             }
         )
         # Real Input
@@ -51,7 +53,8 @@ class FMC_functionsTest(unittest.TestCase):
             {
                 "read_type": "read_input_registers",
                 "UNIT": 0x1,
-                "length": 1
+                "length": 1,
+                "unit_reader": "getRegister(0)"
             }
         )
         # Real Output
@@ -63,7 +66,8 @@ class FMC_functionsTest(unittest.TestCase):
             {
                 "read_type": "read_holding_registers",
                 "UNIT": 0x1,
-                "length": 1
+                "length": 1,
+                "unit_reader": "getRegister(0)"
             }
         )
     
@@ -78,7 +82,8 @@ class FMC_functionsTest(unittest.TestCase):
             {
                 "read_type": "read_holding_registers",
                 "UNIT": 0x1,
-                "length": 1
+                "length": 1,
+                "unit_reader": "getRegister(0)"
             }
         )
 

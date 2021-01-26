@@ -40,6 +40,12 @@ class FactoryIOModbusClientTest(unittest.TestCase):
     # ===================================================================================
     # TESTING
     # ===================================================================================
+    # __init__
+    def test_constructor(self):
+        self.assertEqual(
+            self.fmc.fault_tags,
+            { "read": {}, "write": {} }
+        )
     # load_tags
     def test_load_tags(self):
         loaded_tags= self.fmc.load_tags(FactoryIOModbusClientTest.MOCK_TAGS_PATH)
@@ -175,3 +181,135 @@ class FactoryIOModbusClientTest(unittest.TestCase):
         self.fmc.write_tag("AL1_Z_SET", 5.2)
 
 
+    # ===================================================================================
+    # read_fault
+    def test_read_fault1(self):
+        # Spy on FactoryIOModbusClient object method "read_discrete_inputs"
+        self.fmc.read_discrete_inputs= MagicMock()
+        tag_name= "S_AL1_B"
+        forced_value= False
+        # assertions
+        self.assertTrue(self.fmc.read_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["read"])
+        self.assertTrue(self.fmc.fault_tags["read"][tag_name] == forced_value)
+        self.assertTrue(self.fmc.read_tag(tag_name) == forced_value)
+    
+    def test_read_fault2(self):
+        # Spy on FactoryIOModbusClient object method "read_input_registers"
+        self.fmc.read_input_registers= MagicMock()
+        tag_name= "AL2_ST_Z_POS"
+        forced_value= 500
+        # assertions
+        self.assertTrue(self.fmc.read_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["read"])
+        self.assertTrue(self.fmc.fault_tags["read"][tag_name] == forced_value)
+        self.assertTrue(self.fmc.read_tag(tag_name) == forced_value)
+
+    def test_read_fault3(self):
+        # Spy on FactoryIOModbusClient object method "read_coils"
+        self.fmc.read_coils= MagicMock()
+        tag_name= "AL2_ST_GRAB"
+        forced_value= False
+        # assertions
+        self.assertTrue(self.fmc.read_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["read"])
+        self.assertTrue(self.fmc.fault_tags["read"][tag_name] == forced_value)
+        self.assertTrue(self.fmc.read_tag(tag_name) == forced_value)
+
+    def test_read_fault4(self):
+        # Spy on FactoryIOModbusClient object method "read_holding_registers"
+        self.fmc.read_holding_registers= MagicMock()
+        tag_name= "AL1_Z_SET"
+        forced_value= 400
+        # assertions
+        self.assertTrue(self.fmc.read_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["read"])
+        self.assertTrue(self.fmc.fault_tags["read"][tag_name] == forced_value)
+        self.assertTrue(self.fmc.read_tag(tag_name) == forced_value)
+
+    @unittest.expectedFailure
+    def test_read_fault_fail1(self):
+        tag_name= "AL2_ST_Z_POS"
+        forced_value= False
+        # assertions
+        self.fmc.read_fault(tag_name, forced_value)
+
+    @unittest.expectedFailure
+    def test_read_fault_fail2(self):
+        tag_name= "S_AL1_B"
+        forced_value= 500
+        # assertions
+        self.fmc.read_fault(tag_name, forced_value)
+
+    @unittest.expectedFailure
+    def test_read_fault_fail3(self):
+        tag_name= "AL2_ST_GRAB"
+        forced_value= 500
+        # assertions
+        self.fmc.read_fault(tag_name, forced_value)
+
+    @unittest.expectedFailure
+    def test_read_fault_fail4(self):
+        tag_name= "AL1_Z_SET"
+        forced_value= False
+        # assertions
+        self.fmc.read_fault(tag_name, forced_value)
+
+
+    # ===================================================================================
+    # write_fault
+    def test_write_fault1(self):
+        # Spy on FactoryIOModbusClient object method "write_coil"
+        self.fmc.write_coil= MagicMock()
+        tag_name= "AL2_ST_GRAB"
+        # Expected arguments
+        exp_args= {
+            "Address": 54,
+            "value": True,
+            "UNIT": 0x1
+        }
+        forced_value= False
+        # assertions
+        self.assertTrue(self.fmc.write_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["write"])
+        self.assertTrue(self.fmc.fault_tags["write"][tag_name] == forced_value)
+        self.fmc.write_tag(tag_name, exp_args["value"])
+        self.fmc.write_coil.assert_called_with(
+            exp_args["Address"],
+            forced_value, unit=exp_args["UNIT"]
+        )
+
+    def test_write_fault2(self):
+        # Spy on FactoryIOModbusClient object method "write_register"
+        self.fmc.write_register= MagicMock()
+        tag_name= "AL1_Z_SET"
+        # Expected arguments
+        exp_args= {
+            "Address": 2,
+            "value": 700,
+            "UNIT": 0x1
+        }
+        forced_value= 400
+        # assertions
+        self.assertTrue(self.fmc.write_fault(tag_name, forced_value))
+        self.assertTrue(tag_name in self.fmc.fault_tags["write"])
+        self.assertTrue(self.fmc.fault_tags["write"][tag_name] == forced_value)
+        self.fmc.write_tag(tag_name, exp_args["value"])
+        self.fmc.write_register.assert_called_with(
+            exp_args["Address"],
+            forced_value, unit=exp_args["UNIT"]
+        )
+
+    @unittest.expectedFailure
+    def test_write_fault_fail1(self):
+        tag_name= "AL2_ST_GRAB"
+        forced_value= 500
+        # assertions
+        self.fmc.write_fault(tag_name, forced_value)
+
+    @unittest.expectedFailure
+    def test_write_fault_fail2(self):
+        tag_name= "AL1_Z_SET"
+        forced_value= False
+        # assertions
+        self.fmc.write_fault(tag_name, forced_value)

@@ -6,14 +6,14 @@
 
 #==============================================================================
 # Constants
-MODBUS_HOST= "192.168.1.109"
+MODBUS_HOST= "192.168.1.111"
 MODBUS_PORT= 502
 TAGS_PATH= "./sample/stacker/tags.csv"
 CYCLE_PERIOD= 100 #milliseconds
 
 #==============================================================================
 # Imports
-import sys, time
+import sys, time, threading
 from importlib import util
 
 # User-defined Imports
@@ -26,11 +26,35 @@ spec.loader.exec_module(modbusclient)
 from modbusclient import FactoryIOModbusClient
 
 #==============================================================================
+# FAULT INJECTION THREAD
+class FaultInjector(threading.Thread):
+    def __init__(self, fmc):
+        threading.Thread.__init__(self)
+        self.fmc= fmc
+
+    def run(self):
+        # FAULT INJECTION
+        # ACTUATORS
+        # Inject fault into AL1_ST_X_POS after 1 second
+        time.sleep(1)
+        self.fmc.write_fault("AL1_ST_X_SET", 700)
+        # SENSORS
+        # Inject fault into ST_AL1_ST1 after 1 + 2 seconds
+        time.sleep(2)
+        self.fmc.read_fault("ST_AL1_ST1", True)
+
+
+#==============================================================================
 # Create client instance
 with FactoryIOModbusClient(MODBUS_HOST, MODBUS_PORT, filepath=TAGS_PATH) as client:
     # Connect client
     isConnected= client.connect()
     assert isConnected
+
+    # Initialize FaultInjection thread
+    fi_background= FaultInjector(client)
+    # start thread in background
+    fi_background.start()
 
     # Initialize Places
     # Places

@@ -7,3 +7,6 @@ fmc.ipynb
 # Python
 *__pycache__*
 
+# Coverage
+.coverage
+

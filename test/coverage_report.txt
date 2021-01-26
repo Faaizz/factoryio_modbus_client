@@ -1,0 +1,11 @@
+Name                                    Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------
+src\FMC_functions.py                       41      0   100%
+src\__init__.py                             0      0   100%
+src\modbusclient.py                        91      8    91%   103-104, 147-148, 180, 197-198, 228
+test\integration\__init__.py                0      0   100%
+test\integration\modbusclient_test.py     151      0   100%
+test\unit\FMC_functions_test.py            21      0   100%
+test\unit\__init__.py                       0      0   100%
+---------------------------------------------------------------------
+TOTAL                                     304      8    97%

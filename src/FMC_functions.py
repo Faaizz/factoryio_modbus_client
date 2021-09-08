@@ -16,9 +16,9 @@ def extract_addresses(addresses):
         A list of integers extracted from supplied addresses. 
         """
         
-        # Since lists are iterated over in Python in an oerderly fashion, 
-        #   put 'Input Reg ' before 'Input ' such that the 'Reg 'an address 
-        #   with an 'Input Reg ' prefix doesn't get left behind
+        # Since lists are iterated over in Python in an orderly fashion, 
+        #   put 'Input Reg' before 'Input' such that the 'Reg' in an address 
+        #   with an 'Input Reg' prefix doesn't get left behind
         address_prefixes= ["Input Reg ", "Holding Reg ", "Input ", "Coil "]
 
         

@@ -1,17 +1,17 @@
-#==============================================================================
+#============================================================
 # DEMO CONTROLLER
-# PLANT MODEL: ./sample/Stacking.factoryio
+# PLANT MODEL: ./Stacking.factoryio
 # AUTHOR: Faizudeen Kajogbola
-#==============================================================================
+#============================================================
 
-#==============================================================================
+#============================================================
 # Constants
 MODBUS_HOST= "192.168.1.111"
 MODBUS_PORT= 502
 TAGS_PATH= "./sample/stacker/tags.csv"
 CYCLE_PERIOD= 100 #milliseconds
 
-#==============================================================================
+#============================================================
 # Imports
 import sys, time, threading
 from importlib import util
@@ -25,7 +25,7 @@ sys.modules[module_name] = modbusclient
 spec.loader.exec_module(modbusclient)
 from modbusclient import FactoryIOModbusClient
 
-#==============================================================================
+#============================================================
 # FAULT INJECTION THREAD
 class FaultInjector(threading.Thread):
     def __init__(self, fmc):
@@ -44,7 +44,7 @@ class FaultInjector(threading.Thread):
         self.fmc.read_fault("ST_AL1_ST1", True)
 
 
-#==============================================================================
+#============================================================
 # Create client instance
 with FactoryIOModbusClient(MODBUS_HOST, MODBUS_PORT, filepath=TAGS_PATH) as client:
     # Connect client

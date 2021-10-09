@@ -35,11 +35,11 @@ class FaultInjector(threading.Thread):
     def run(self):
         # FAULT INJECTION
         # ACTUATORS
-        # Inject fault into AL1_ST_X_POS after 1 second
+        # Inject fault into AL1_ST_X_POS after 5 second
         time.sleep(5)
         self.fmc.write_fault("AL1_ST_X_SET", 700)
         # SENSORS
-        # Inject fault into ST_AL1_ST1 after 1 + 2 seconds
+        # Inject fault into ST_AL1_ST1 after 7 seconds
         time.sleep(7)
         self.fmc.read_fault("ST_AL1_ST1", True)
 
